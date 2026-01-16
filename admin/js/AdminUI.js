@@ -8,6 +8,7 @@ class AdminUI {
     constructor() {
         this.components = new Map();
         this.notifications = [];
+        this.apiClient = new ApiClient('/api/index.php?url=');
     }
 
     /**
@@ -252,7 +253,7 @@ class AdminUI {
      */
     async viewMessage(messageId) {
         try {
-            const response = await apiClient.getMessage(messageId);
+            const response = await this.apiClient.getMessage(messageId);
             if (response.success) {
                 const msg = response.data;
                 const modal = document.getElementById('messageModal');
@@ -287,7 +288,7 @@ class AdminUI {
      */
     async markAsRead(messageId) {
         try {
-            const response = await apiClient.updateMessageStatus(messageId, 'read');
+            const response = await this.apiClient.updateMessageStatus(messageId, 'read');
             if (response.success) {
                 this.showSuccess('Mesaj okundu olarak işaretlendi');
                 document.getElementById('messageModal').classList.remove('active');

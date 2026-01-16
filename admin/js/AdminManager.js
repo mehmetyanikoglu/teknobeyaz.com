@@ -297,16 +297,65 @@ class AdminManager {
      * Hizmetleri yükle
      */
     loadServices() {
-        // Gerçek uygulamada API'den alınır
-        console.log('Hizmetler yükleniyor...');
+        const table = document.querySelector('#services-module table tbody');
+        if (!table) return;
+
+        // Demo veriler
+        const services = [
+            { id: 1, name: 'Web Tasarım', price: '5000 TL', status: 'active' },
+            { id: 2, name: 'E-Ticaret', price: '15000 TL', status: 'active' },
+            { id: 3, name: 'Mobil Uygulama', price: '25000 TL', status: 'active' },
+            { id: 4, name: 'SEO Optimizasyon', price: '3000 TL', status: 'active' },
+            { id: 5, name: 'Kurumsal Site', price: '10000 TL', status: 'active' }
+        ];
+
+        table.innerHTML = '';
+        services.forEach(service => {
+            const row = table.insertRow();
+            row.innerHTML = `
+                <td>${service.name}</td>
+                <td>${service.price}</td>
+                <td><span class="status ${service.status}">${service.status === 'active' ? 'Aktif' : 'Pasif'}</span></td>
+                <td>
+                    <button class="btn btn-small btn-edit">Düzenle</button>
+                    <button class="btn btn-small btn-delete">Sil</button>
+                </td>
+            `;
+        });
+        
+        adminUI.initializeDataTables();
     }
 
     /**
      * Kullanıcıları yükle
      */
     loadUsers() {
-        // Gerçek uygulamada API'den alınır
-        console.log('Kullanıcılar yükleniyor...');
+        const table = document.querySelector('#users-module table tbody');
+        if (!table) return;
+
+        // Demo veriler
+        const users = [
+            { id: 1, name: 'Admin', email: 'admin@teknobeyaz.com', role: 'admin', status: 'active' },
+            { id: 2, name: 'Editör', email: 'editor@teknobeyaz.com', role: 'editor', status: 'active' },
+            { id: 3, name: 'Yazar', email: 'writer@teknobeyaz.com', role: 'writer', status: 'active' }
+        ];
+
+        table.innerHTML = '';
+        users.forEach(user => {
+            const row = table.insertRow();
+            row.innerHTML = `
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+                <td>${user.role}</td>
+                <td><span class="status ${user.status}">${user.status === 'active' ? 'Aktif' : 'Pasif'}</span></td>
+                <td>
+                    <button class="btn btn-small btn-edit">Düzenle</button>
+                    <button class="btn btn-small btn-delete">Sil</button>
+                </td>
+            `;
+        });
+        
+        adminUI.initializeDataTables();
     }
 
     /**
