@@ -35,13 +35,19 @@ teknobeyaz.com/
 
 ### 1. Veritabanı Yapılandırması
 
-`api/config/Database.php` dosyasındaki veritabanı bilgilerini düzenleyin:
+`.env.example` dosyasını `.env` olarak kopyalayın ve kendi veritabanı bilgilerinizi girin:
 
-```php
-private $host = 'localhost:3306';
-private $db_name = 'teknobeyaz_';
-private $username = 'teknobeyaz';
-private $password = 'teknobeyaz';
+```bash
+cp .env.example .env
+```
+
+`.env` dosyasını düzenleyin:
+
+```env
+DB_HOST=localhost:3306
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASS=your_database_password
 ```
 
 ### 2. Veritabanı Tablolarını Oluşturma
