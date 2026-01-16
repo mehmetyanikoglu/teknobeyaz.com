@@ -9,8 +9,8 @@ class AdminManager {
         this.modules = {};
         this.currentModule = 'dashboard';
         this.isAuthenticated = true; // Basit auth kontrolü
-        // Global apiClient kullan
-        this.apiClient = window.apiClient;
+        // Global apiClient kullan, yoksa oluştur
+        this.apiClient = window.apiClient || (typeof ApiClient !== 'undefined' ? new ApiClient('/api/index.php?url=') : null);
     }
 
     /**

@@ -389,10 +389,20 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/ApiClient.js"></script>
-    <script src="js/ModuleRouter.js"></script>
-    <script src="js/AdminUI.js"></script>
-    <script src="js/AdminManager.js"></script>
+    <script src="js/ApiClient.js?v=20260116"></script>
+    <script>
+        // ApiClient yüklenmediyse fallback ile tekrar yükle
+        if (typeof ApiClient === 'undefined') {
+            document.write('<script src="/admin/js/ApiClient.js?v=' + Date.now() + '"><\/script>');
+        }
+        // Global apiClient yoksa oluştur
+        if (typeof window.apiClient === 'undefined' && typeof ApiClient !== 'undefined') {
+            window.apiClient = new ApiClient('/api/index.php?url=');
+        }
+    </script>
+    <script src="js/ModuleRouter.js?v=20260116"></script>
+    <script src="js/AdminUI.js?v=20260116"></script>
+    <script src="js/AdminManager.js?v=20260116"></script>
     <script>
         // Sayfa yüklenmeden önce auth kontrolü
         (function() {
