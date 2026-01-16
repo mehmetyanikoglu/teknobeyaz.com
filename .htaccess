@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Dosya ve klasörler varsa direkt erişim izin ver
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # /api/ istekleri doğrudan /api/index.php'ye git
+    RewriteRule ^api/(.*)$ /api/index.php [QSA,L]
+</IfModule>

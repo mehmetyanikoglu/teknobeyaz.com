@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeknoBeYaz - Profesyonel Web Tasarım</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="lang-selector" id="langSelector">
+        <button class="lang-btn active" data-lang="tr">TR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">TeknoBeYaz</div>
+                    <ul class="nav-menu">
+                        <li><a href="#services" data-key="nav.services">Hizmetler</a></li>
+                        <li><a href="#tech" data-key="nav.tech">Teknolojiler</a></li>
+                        <li><a href="#pricing" data-key="nav.pricing">Fiyatlandırma</a></li>
+                        <li><a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.5rem;" data-key="nav.contact">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-key="hero.badge">✨ 2026'nın Web Teknolojileri</div>
+                <h1 class="hero-title" data-key="hero.title">Profesyonel Web Tasarım ile İşinizi Büyütün</h1>
+                <p class="hero-subtitle" data-key="hero.subtitle">Modern teknolojiler ve temiz kod prensipleri ile hızlı, güvenli ve SEO uyumlu web siteleri</p>
+                <div class="cta-buttons">
+                    <a href="#pricing" class="btn btn-primary" data-key="hero.cta1">Hemen Başlayın →</a>
+                    <a href="#services" class="btn btn-secondary" data-key="hero.cta2">Daha Fazla Bilgi</a>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label" data-key="hero.stat1">Tamamlanan Proje</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label" data-key="hero.stat2">Memnuniyet Oranı</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label" data-key="hero.stat3">Destek</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title" data-key="services.title">Hizmetlerimiz</h2>
+            <p class="section-subtitle" data-key="services.subtitle">İhtiyacınıza özel profesyonel web çözümleri</p>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3 data-key="services.landing.title">Landing Page</h3>
+                    <p data-key="services.landing.desc">Yüksek dönüşüm oranlı, hızlı yüklenen ve mobil uyumlu satış sayfaları</p>
+                    <ul>
+                        <li><span data-key="services.landing.f1">✓ Responsive tasarım</span></li>
+                        <li><span data-key="services.landing.f2">✓ SEO optimizasyonu</span></li>
+                        <li><span data-key="services.landing.f3">✓ Hızlı yüklenme</span></li>
+                    </ul>
+                </div>
+                <div class="card featured">
+                    <div class="badge" data-key="services.badge">Popüler</div>
+                    <div class="card-icon">💼</div>
+                    <h3 data-key="services.corporate.title">Kurumsal Web Sitesi</h3>
+                    <p data-key="services.corporate.desc">Markanızı dijital dünyada temsil eden profesyonel web siteleri</p>
+                    <ul>
+                        <li><span data-key="services.corporate.f1">✓ Çok dilli destek</span></li>
+                        <li><span data-key="services.corporate.f2">✓ CMS entegrasyonu</span></li>
+                        <li><span data-key="services.corporate.f3">✓ Admin paneli</span></li>
+                        <li><span data-key="services.corporate.f4">✓ Güvenlik sertifikası</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛒</div>
+                    <h3 data-key="services.ecommerce.title">E-Ticaret Sitesi</h3>
+                    <p data-key="services.ecommerce.desc">Online satış yapmak için hazır, güvenli ödeme sistemli e-ticaret çözümleri</p>
+                    <ul>
+                        <li><span data-key="services.ecommerce.f1">✓ Ödeme entegrasyonları</span></li>
+                        <li><span data-key="services.ecommerce.f2">✓ Ürün yönetimi</span></li>
+                        <li><span data-key="services.ecommerce.f3">✓ Stok takibi</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section id="tech">
+        <div class="container">
+            <h2 class="section-title" data-key="tech.title">Kullandığımız Teknolojiler</h2>
+            <p class="section-subtitle" data-key="tech.subtitle">Güncel ve performanslı teknolojilerle geliştirme</p>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">⚛️</div>
+                    <h3>React / Next.js</h3>
+                    <p data-key="tech.react">Modern, hızlı ve SEO uyumlu web uygulamaları</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Vue.js / Nuxt</h3>
+                    <p data-key="tech.vue">Esnek ve performanslı kullanıcı arayüzleri</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🟢</div>
+                    <h3>Node.js</h3>
+                    <p data-key="tech.node">Ölçeklenebilir backend çözümleri</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🐘</div>
+                    <h3>PHP / Laravel</h3>
+                    <p data-key="tech.php">Güçlü ve güvenli web uygulamaları</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🗄️</div>
+                    <h3>Database</h3>
+                    <p data-key="tech.db">MySQL, PostgreSQL, MongoDB</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <p data-key="tech.cloud">AWS, Azure, Docker, CI/CD</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title" data-key="pricing.title">Fiyatlandırma</h2>
+            <p class="section-subtitle" data-key="pricing.subtitle">İhtiyacınıza uygun paketi seçin</p>
+            <div class="grid">
+                <div class="card">
+                    <h3 data-key="pricing.basic.title">Temel Paket</h3>
+                    <div class="price">
+                        <div class="price-amount">₺15.000</div>
+                        <div class="price-label" data-key="pricing.period">/ proje</div>
+                    </div>
+                    <ul>
+                        <li><span data-key="pricing.basic.f1">✓ 5 sayfalık web sitesi</span></li>
+                        <li><span data-key="pricing.basic.f2">✓ Responsive tasarım</span></li>
+                        <li><span data-key="pricing.basic.f3">✓ Temel SEO</span></li>
+                        <li><span data-key="pricing.basic.f4">✓ İletişim formu</span></li>
+                        <li><span data-key="pricing.basic.f5">✓ 1 ay destek</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%; text-align: center; margin-top: 1.5rem;" data-key="pricing.btn">Paketi Seç</a>
+                </div>
+                <div class="card featured">
+                    <div class="badge" data-key="pricing.popular">En Popüler</div>
+                    <h3 data-key="pricing.pro.title">Profesyonel Paket</h3>
+                    <div class="price">
+                        <div class="price-amount">₺35.000</div>
+                        <div class="price-label" data-key="pricing.period">/ proje</div>
+                    </div>
+                    <ul>
+                        <li><span data-key="pricing.pro.f1">✓ 15 sayfalık web sitesi</span></li>
+                        <li><span data-key="pricing.pro.f2">✓ Özel tasarım</span></li>
+                        <li><span data-key="pricing.pro.f3">✓ Gelişmiş SEO</span></li>
+                        <li><span data-key="pricing.pro.f4">✓ CMS entegrasyonu</span></li>
+                        <li><span data-key="pricing.pro.f5">✓ 4 dil desteği</span></li>
+                        <li><span data-key="pricing.pro.f6">✓ Admin paneli</span></li>
+                        <li><span data-key="pricing.pro.f7">✓ 3 ay destek</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1.5rem;" data-key="pricing.btn">Paketi Seç</a>
+                </div>
+                <div class="card">
+                    <h3 data-key="pricing.enterprise.title">Kurumsal Paket</h3>
+                    <div class="price">
+                        <div class="price-amount">₺75.000+</div>
+                        <div class="price-label" data-key="pricing.period">/ proje</div>
+                    </div>
+                    <ul>
+                        <li><span data-key="pricing.enterprise.f1">✓ Sınırsız sayfa</span></li>
+                        <li><span data-key="pricing.enterprise.f2">✓ Özel yazılım geliştirme</span></li>
+                        <li><span data-key="pricing.enterprise.f3">✓ E-ticaret özellikleri</span></li>
+                        <li><span data-key="pricing.enterprise.f4">✓ API entegrasyonları</span></li>
+                        <li><span data-key="pricing.enterprise.f5">✓ Çok dilli destek</span></li>
+                        <li><span data-key="pricing.enterprise.f6">✓ Bulut hosting</span></li>
+                        <li><span data-key="pricing.enterprise.f7">✓ 12 ay destek</span></li>
+                        <li><span data-key="pricing.enterprise.f8">✓ Özel danışmanlık</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%; text-align: center; margin-top: 1.5rem;" data-key="pricing.btn">Paketi Seç</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title" data-key="contact.title">İletişime Geçin</h2>
+            <p class="section-subtitle" data-key="contact.subtitle">Projeniz hakkında konuşalım</p>
+            <div class="contact-grid">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label data-key="contact.name">Adınız</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-key="contact.email">E-posta</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-key="contact.phone">Telefon</label>
+                        <input type="tel">
+                    </div>
+                    <div class="form-group">
+                        <label data-key="contact.service">Hizmet</label>
+                        <select>
+                            <option data-key="contact.s1">Landing Page</option>
+                            <option data-key="contact.s2">Kurumsal Web Sitesi</option>
+                            <option data-key="contact.s3">E-Ticaret</option>
+                            <option data-key="contact.s4">Özel Proje</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-key="contact.message">Mesajınız</label>
+                        <textarea rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-key="contact.submit">Gönder</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h4 data-key="contact.email">E-posta</h4>
+                            <p>info@teknobeyaz.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <div>
+                            <h4 data-key="contact.phone">Telefon</h4>
+                            <p>+90 XXX XXX XX XX</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🌐</div>
+                        <div>
+                            <h4 data-key="contact.languages">Diller</h4>
+                            <p data-key="contact.langlist">Türkçe, English, العربية, Русский</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TeknoBeYaz. <span data-key="footer.rights">Tüm hakları saklıdır.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="src/js/FrontendApiClient.js"></script>
+    <script src="src/js/I18nManager.js"></script>
+    <script src="src/js/LanguageController.js"></script>
+    <script src="src/js/FormHandler.js"></script>
+    <script src="src/js/App.js"></script>
+    
+    <!-- Bootstrap Application -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const app = new App();
+            await app.bootstrap();
+        });
+    </script>
+</body>
+</html>

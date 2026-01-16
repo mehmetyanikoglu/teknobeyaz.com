@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "services": "Hizmetler",
+    "tech": "Teknolojiler",
+    "pricing": "Fiyatlandırma",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "badge": "✨ 2026'nın Web Teknolojileri",
+    "title": "Profesyonel Web Tasarım ile İşinizi Büyütün",
+    "subtitle": "Modern teknolojiler ve temiz kod prensipleri ile hızlı, güvenli ve SEO uyumlu web siteleri",
+    "cta1": "Hemen Başlayın →",
+    "cta2": "Daha Fazla Bilgi",
+    "stat1": "Tamamlanan Proje",
+    "stat2": "Memnuniyet Oranı",
+    "stat3": "Destek"
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "İhtiyacınıza özel profesyonel web çözümleri",
+    "badge": "Popüler",
+    "landing": {
+      "title": "Landing Page",
+      "desc": "Yüksek dönüşüm oranlı, hızlı yüklenen ve mobil uyumlu satış sayfaları",
+      "f1": "✓ Responsive tasarım",
+      "f2": "✓ SEO optimizasyonu",
+      "f3": "✓ Hızlı yüklenme"
+    },
+    "corporate": {
+      "title": "Kurumsal Web Sitesi",
+      "desc": "Markanızı dijital dünyada temsil eden profesyonel web siteleri",
+      "f1": "✓ Çok dilli destek",
+      "f2": "✓ CMS entegrasyonu",
+      "f3": "✓ Admin paneli",
+      "f4": "✓ Güvenlik sertifikası"
+    },
+    "ecommerce": {
+      "title": "E-Ticaret Sitesi",
+      "desc": "Online satış yapmak için hazır, güvenli ödeme sistemli e-ticaret çözümleri",
+      "f1": "✓ Ödeme entegrasyonları",
+      "f2": "✓ Ürün yönetimi",
+      "f3": "✓ Stok takibi"
+    }
+  },
+  "tech": {
+    "title": "Kullandığımız Teknolojiler",
+    "subtitle": "Güncel ve performanslı teknolojilerle geliştirme",
+    "react": "Modern, hızlı ve SEO uyumlu web uygulamaları",
+    "vue": "Esnek ve performanslı kullanıcı arayüzleri",
+    "node": "Ölçeklenebilir backend çözümleri",
+    "php": "Güçlü ve güvenli web uygulamaları",
+    "db": "MySQL, PostgreSQL, MongoDB",
+    "cloud": "AWS, Azure, Docker, CI/CD"
+  },
+  "pricing": {
+    "title": "Fiyatlandırma",
+    "subtitle": "İhtiyacınıza uygun paketi seçin",
+    "period": "/ proje",
+    "popular": "En Popüler",
+    "btn": "Paketi Seç",
+    "basic": {
+      "title": "Temel Paket",
+      "f1": "✓ 5 sayfalık web sitesi",
+      "f2": "✓ Responsive tasarım",
+      "f3": "✓ Temel SEO",
+      "f4": "✓ İletişim formu",
+      "f5": "✓ 1 ay destek"
+    },
+    "pro": {
+      "title": "Profesyonel Paket",
+      "f1": "✓ 15 sayfalık web sitesi",
+      "f2": "✓ Özel tasarım",
+      "f3": "✓ Gelişmiş SEO",
+      "f4": "✓ CMS entegrasyonu",
+      "f5": "✓ 4 dil desteği",
+      "f6": "✓ Admin paneli",
+      "f7": "✓ 3 ay destek"
+    },
+    "enterprise": {
+      "title": "Kurumsal Paket",
+      "f1": "✓ Sınırsız sayfa",
+      "f2": "✓ Özel yazılım geliştirme",
+      "f3": "✓ E-ticaret özellikleri",
+      "f4": "✓ API entegrasyonları",
+      "f5": "✓ Çok dilli destek",
+      "f6": "✓ Bulut hosting",
+      "f7": "✓ 12 ay destek",
+      "f8": "✓ Özel danışmanlık"
+    }
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Projeniz hakkında konuşalım",
+    "name": "Adınız",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "service": "Hizmet",
+    "message": "Mesajınız",
+    "submit": "Gönder",
+    "s1": "Landing Page",
+    "s2": "Kurumsal Web Sitesi",
+    "s3": "E-Ticaret",
+    "s4": "Özel Proje",
+    "languages": "Diller",
+    "langlist": "Türkçe, English, العربية, Русский"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  }
+}

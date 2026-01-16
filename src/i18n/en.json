@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "services": "Services",
+    "tech": "Technologies",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "✨ 2026 Web Technologies",
+    "title": "Grow Your Business with Professional Web Design",
+    "subtitle": "Fast, secure, and SEO-friendly websites with modern technologies and clean code principles",
+    "cta1": "Get Started →",
+    "cta2": "Learn More",
+    "stat1": "Completed Projects",
+    "stat2": "Satisfaction Rate",
+    "stat3": "Support"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional web solutions tailored to your needs",
+    "badge": "Popular",
+    "landing": {
+      "title": "Landing Page",
+      "desc": "High-conversion, fast-loading, and mobile-friendly sales pages",
+      "f1": "✓ Responsive design",
+      "f2": "✓ SEO optimization",
+      "f3": "✓ Fast loading"
+    },
+    "corporate": {
+      "title": "Corporate Website",
+      "desc": "Professional websites that represent your brand in the digital world",
+      "f1": "✓ Multilingual support",
+      "f2": "✓ CMS integration",
+      "f3": "✓ Admin panel",
+      "f4": "✓ Security certificate"
+    },
+    "ecommerce": {
+      "title": "E-Commerce Website",
+      "desc": "Ready-to-sell e-commerce solutions with secure payment systems",
+      "f1": "✓ Payment integrations",
+      "f2": "✓ Product management",
+      "f3": "✓ Inventory tracking"
+    }
+  },
+  "tech": {
+    "title": "Technologies We Use",
+    "subtitle": "Development with cutting-edge and high-performance technologies",
+    "react": "Modern, fast, and SEO-friendly web applications",
+    "vue": "Flexible and performant user interfaces",
+    "node": "Scalable backend solutions",
+    "php": "Powerful and secure web applications",
+    "db": "MySQL, PostgreSQL, MongoDB",
+    "cloud": "AWS, Azure, Docker, CI/CD"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose the package that suits your needs",
+    "period": "/ project",
+    "popular": "Most Popular",
+    "btn": "Select Package",
+    "basic": {
+      "title": "Basic Package",
+      "f1": "✓ 5-page website",
+      "f2": "✓ Responsive design",
+      "f3": "✓ Basic SEO",
+      "f4": "✓ Contact form",
+      "f5": "✓ 1 month support"
+    },
+    "pro": {
+      "title": "Professional Package",
+      "f1": "✓ 15-page website",
+      "f2": "✓ Custom design",
+      "f3": "✓ Advanced SEO",
+      "f4": "✓ CMS integration",
+      "f5": "✓ 4 language support",
+      "f6": "✓ Admin panel",
+      "f7": "✓ 3 months support"
+    },
+    "enterprise": {
+      "title": "Enterprise Package",
+      "f1": "✓ Unlimited pages",
+      "f2": "✓ Custom software development",
+      "f3": "✓ E-commerce features",
+      "f4": "✓ API integrations",
+      "f5": "✓ Multilingual support",
+      "f6": "✓ Cloud hosting",
+      "f7": "✓ 12 months support",
+      "f8": "✓ Dedicated consulting"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's talk about your project",
+    "name": "Your Name",
+    "email": "Email",
+    "phone": "Phone",
+    "service": "Service",
+    "message": "Your Message",
+    "submit": "Send",
+    "s1": "Landing Page",
+    "s2": "Corporate Website",
+    "s3": "E-Commerce",
+    "s4": "Custom Project",
+    "languages": "Languages",
+    "langlist": "Turkish, English, العربية, Русский"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
