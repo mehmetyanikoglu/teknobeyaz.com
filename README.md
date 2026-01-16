@@ -6,9 +6,7 @@ Modern ve çok dilli (TR/EN/AR/RU) web tasarım şirketi sitesi.
 
 - **Çok Dilli Destek**: Türkçe, İngilizce, Arapça, Rusça
 - **Responsive Tasarım**: Tüm cihazlarda mükemmel görünüm
-- **Admin Paneli**: Tam özellikli içerik yönetimi
-- **REST API**: Backend entegrasyonu
-- **MySQL Veritabanı**: Güvenli veri saklama
+- **Tamamen Frontend (JS/HTML/CSS)**: Sunucu tarafı olmadan çalışır
 - **SOLID Prensipleri**: Temiz ve sürdürülebilir kod
 
 ## 📁 Proje Yapısı
@@ -20,65 +18,18 @@ teknobeyaz.com/
 │   ├── css/               # Stil dosyaları
 │   ├── js/                # Frontend JavaScript
 │   └── i18n/              # Dil dosyaları (tr, en, ar, ru)
-├── admin/
-│   ├── index.html         # Admin paneli
-│   ├── login.html         # Giriş sayfası
-│   ├── css/               # Admin stilleri
-│   └── js/                # Admin JavaScript
-└── api/
-    ├── index.php          # API router
-    ├── config/            # Veritabanı ayarları
-    └── models/            # Veri modelleri
+└── (API yok)              # PHP backend kaldırıldı
 ```
 
 ## 🛠️ Kurulum
 
-### 1. Veritabanı Yapılandırması
+Statik dosyaları bir web sunucusunda (örn. Plesk, Nginx, Apache) veya GitHub Pages gibi bir statik barındırma üzerinde yayınlayın. Sunucu tarafı gerektirmez.
 
-`.env.example` dosyasını `.env` olarak kopyalayın ve kendi veritabanı bilgilerinizi girin:
 
-```bash
-cp .env.example .env
-```
 
-`.env` dosyasını düzenleyin:
+## 🔌 API
 
-```env
-DB_HOST=localhost:3306
-DB_NAME=your_database_name
-DB_USER=your_database_user
-DB_PASS=your_database_password
-```
-
-### 2. Veritabanı Tablolarını Oluşturma
-
-Tarayıcıda şu URL'ye erişin:
-```
-https://yourdomain.com/api/index.php?url=init
-```
-
-### 3. Admin Paneli Giriş
-
-- URL: `https://yourdomain.com/admin/`
-- Kullanıcı: `admin@teknobeyaz.com`
-- Şifre: `admin123`
-
-## 🔌 API Endpoints
-
-### Statistics
-- `GET /api/index.php?url=stats` - Dashboard istatistikleri
-
-### Translations
-- `GET /api/index.php?url=translations` - Tüm çevirileri listele
-- `POST /api/index.php?url=translations` - Yeni çeviri ekle
-- `PUT /api/index.php?url=translations/{id}` - Çeviri güncelle
-- `DELETE /api/index.php?url=translations/{id}` - Çeviri sil
-
-### Messages
-- `GET /api/index.php?url=messages` - Tüm mesajları listele
-- `POST /api/index.php?url=messages` - Yeni mesaj ekle
-- `PUT /api/index.php?url=messages/{id}` - Mesaj durumu güncelle
-- `DELETE /api/index.php?url=messages/{id}` - Mesaj sil
+Bu proje artık herhangi bir API veya PHP backend kullanmaz. Tüm içerik ve çeviriler `src/i18n/*.json` üzerinden yüklenir, iletişim formu ise frontend içinde kullanıcıya başarı bildirimi gösterir.
 
 ## 🎨 Tasarım Desenleri
 
@@ -104,10 +55,8 @@ Dil dosyaları `src/i18n/` klasöründe JSON formatında:
 
 ## 🔒 Güvenlik
 
-- PDO prepared statements (SQL injection koruması)
-- Token-based authentication (Admin paneli)
-- CORS yapılandırması
-- Input validation
+- Girdi doğrulama (istemci tarafında)
+- Harici backend olmadığı için sunucu tarafı güvenlik kapsam dışıdır
 
 ## 📄 Lisans
 

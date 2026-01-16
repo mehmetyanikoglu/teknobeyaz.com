@@ -33,23 +33,11 @@ class I18nManager {
      * Async/await pattern kullanarak bağımlılık azalt
      */
     async loadLanguages() {
-        // Öncelik: API'den çek, hata olursa local JSON'a düş
+        // JS-only: Lokal JSON dosyalarını yükle
         try {
             const promises = this.supportedLanguages.map(async (lang) => {
-                try {
-                    const res = await fetch(`/api/index.php?url=translations-json&lang=${lang}`);
-                    if (!res.ok) throw new Error('API yanıtı başarısız');
-                    const data = await res.json();
-                    if (data.success && data.data) {
-                        this.translations[lang] = data.data;
-                        return;
-                    }
-                    throw new Error('API başarı döndürmedi');
-                } catch (apiErr) {
-                    // Fallback local JSON
-                    const local = await fetch(`src/i18n/${lang}.json`).then(r => r.json());
-                    this.translations[lang] = local;
-                }
+                const local = await fetch(`src/i18n/${lang}.json`).then(r => r.json());
+                this.translations[lang] = local;
             });
 
             await Promise.all(promises);

@@ -29,25 +29,9 @@ class FormHandler {
         // Form verilerini al
         const formData = this.getFormData();
         
-        try {
-            // API'ye gönder
-            const response = await frontendApi.sendContactForm(
-                formData.get('name') || '',
-                formData.get('email') || '',
-                formData.get('phone') || '',
-                formData.get('service') || '',
-                formData.get('message') || ''
-            );
-
-            if (response.success) {
-                this.showSuccess();
-                this.resetForm();
-            } else {
-                console.error('Form gönderilemedi:', response.message);
-            }
-        } catch (error) {
-            console.error('Form gönderme hatası:', error);
-        }
+        // JS-only mod: Backend yok, direkt başarı göster
+        this.showSuccess();
+        this.resetForm();
     }
 
     /**
