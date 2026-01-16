@@ -390,10 +390,36 @@
 
     <!-- Scripts -->
     <script src="js/ApiClient.js"></script>
-    <script src="js/AdminManager.js"></script>
     <script src="js/ModuleRouter.js"></script>
     <script src="js/AdminUI.js"></script>
+    <script src="js/AdminManager.js"></script>
     <script>
+        // Sayfa yüklenmeden önce auth kontrolü
+        (function() {
+            const token = localStorage.getItem('adminToken');
+            if (!token) {
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            // Token geçerlilik kontrolü
+            try {
+                const tokenTime = parseInt(token.split('_')[2]);
+                const now = Date.now();
+                const hoursPassed = (now - tokenTime) / (1000 * 60 * 60);
+                
+                if (hoursPassed >= 24) {
+                    localStorage.removeItem('adminToken');
+                    window.location.href = 'login.html';
+                    return;
+                }
+            } catch (e) {
+                localStorage.removeItem('adminToken');
+                window.location.href = 'login.html';
+                return;
+            }
+        })();
+
         document.addEventListener('DOMContentLoaded', () => {
             const admin = new AdminManager();
             admin.init();

@@ -16,11 +16,6 @@ class AdminManager {
      * Admin panelini başlat
      */
     init() {
-        if (!this.checkAuthentication()) {
-            window.location.href = 'login.html';
-            return;
-        }
-
         this.initializeModuleRouter();
         this.attachEventListeners();
         this.loadDashboardData();
