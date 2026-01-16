@@ -47,6 +47,10 @@ switch ($resource) {
         handleTranslations($request_method, $id, $input);
         break;
 
+    case 'translations-json':
+        handleTranslationsJson($request_method);
+        break;
+
     case 'messages':
         handleMessages($request_method, $id, $input);
         break;
@@ -152,6 +156,21 @@ function handleTranslations($method, $id, $input) {
             }
             break;
     }
+}
+
+/**
+ * Çevirileri nested JSON olarak döndür
+ */
+function handleTranslationsJson($method) {
+    if ($method !== 'GET') {
+        echo ApiResponse::error('Sadece GET desteklenir', 405);
+        return;
+    }
+
+    $lang = $_GET['lang'] ?? 'tr';
+    $translation = new Translation();
+    $data = $translation->getAllAsJson($lang);
+    echo ApiResponse::success($data, 'Çeviriler yüklendi');
 }
 
 /**
