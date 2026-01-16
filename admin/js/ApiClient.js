@@ -47,8 +47,8 @@ class ApiClient {
      */
     async get(endpoint, params = {}) {
         const query = new URLSearchParams(params).toString();
-        const url = query ? `${endpoint}?${query}` : endpoint;
-        
+        const url = query ? `${endpoint}&${query}` : endpoint;
+
         return this.request(url, {
             method: 'GET'
         });
