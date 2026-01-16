@@ -8,7 +8,8 @@ class AdminUI {
     constructor() {
         this.components = new Map();
         this.notifications = [];
-        this.apiClient = new ApiClient('/api/index.php?url=');
+        // Global apiClient kullan
+        this.apiClient = window.apiClient;
     }
 
     /**

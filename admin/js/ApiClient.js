@@ -135,5 +135,10 @@ class ApiClient {
     }
 }
 
+// Global erişim için window'a ekle
+window.ApiClient = ApiClient;
+
 // Global instance
-const apiClient = new ApiClient();
+if (typeof window !== 'undefined') {
+    window.apiClient = new ApiClient('/api/index.php?url=');
+}
