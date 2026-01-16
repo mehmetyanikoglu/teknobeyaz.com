@@ -4,7 +4,7 @@
  */
 
 class FrontendApiClient {
-    constructor(baseUrl = '/api/index.php?url=') {
+    constructor(baseUrl = '/api/index.php?v=20260116b&url=') {
         this.baseUrl = baseUrl;
     }
 

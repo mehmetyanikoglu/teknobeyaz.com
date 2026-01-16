@@ -88,6 +88,10 @@ class ApiClient {
         return this.get('translations', { page, per_page });
     }
 
+    async getTranslationsJson(lang = 'tr') {
+        return this.get(`translations-json`, { lang });
+    }
+
     async getTranslation(id) {
         return this.get(`translations/${id}`);
     }
@@ -140,5 +144,5 @@ window.ApiClient = ApiClient;
 
 // Global instance
 if (typeof window !== 'undefined') {
-    window.apiClient = new ApiClient('/api/index.php?url=');
+    window.apiClient = new ApiClient('/api/index.php?v=20260116b&url=');
 }

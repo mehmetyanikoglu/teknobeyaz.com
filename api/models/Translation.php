@@ -64,7 +64,7 @@ class Translation {
      */
     public function getByKey($key) {
         try {
-            $query = "SELECT * FROM {$this->table} WHERE key = :key";
+            $query = "SELECT * FROM {$this->table} WHERE `key` = :key";
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(':key', $key, PDO::PARAM_STR);
             $stmt->execute();
@@ -85,7 +85,7 @@ class Translation {
                 return ['success' => false, 'message' => 'Anahtar zorunludur'];
             }
 
-            $query = "INSERT INTO {$this->table} (key, tr, en, ar, ru) 
+            $query = "INSERT INTO {$this->table} (`key`, tr, en, ar, ru) 
                      VALUES (:key, :tr, :en, :ar, :ru)";
             $stmt = $this->conn->prepare($query);
 

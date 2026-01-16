@@ -177,10 +177,13 @@ class AdminManager {
      * Çevirileri yükle
      */
     loadTranslations() {
-        this.apiClient.getTranslations(1, 50)
+        // Nested JSON alan yeni endpoint
+        this.apiClient.getTranslationsJson('tr')
             .then(response => {
                 if (response.success && response.data) {
                     this.populateTranslationTable(response.data);
+                } else {
+                    throw new Error(response.message || 'Çeviriler yüklenemedi');
                 }
             })
             .catch(error => {
@@ -213,7 +216,7 @@ class AdminManager {
             return keys;
         };
 
-        const keys = flattenKeys(translations).slice(0, 10); // İlk 10'unu göster
+        const keys = flattenKeys(translations).slice(0, 50); // İlk 50'yi göster
 
         keys.forEach(key => {
             const row = table.insertRow();

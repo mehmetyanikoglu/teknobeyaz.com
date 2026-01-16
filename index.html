@@ -216,28 +216,28 @@
                 <form id="contactForm">
                     <div class="form-group">
                         <label data-key="contact.name">Adınız</label>
-                        <input type="text" required>
+                        <input type="text" name="name" required>
                     </div>
                     <div class="form-group">
                         <label data-key="contact.email">E-posta</label>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label data-key="contact.phone">Telefon</label>
-                        <input type="tel">
+                        <input type="tel" name="phone">
                     </div>
                     <div class="form-group">
                         <label data-key="contact.service">Hizmet</label>
-                        <select>
-                            <option data-key="contact.s1">Landing Page</option>
-                            <option data-key="contact.s2">Kurumsal Web Sitesi</option>
-                            <option data-key="contact.s3">E-Ticaret</option>
-                            <option data-key="contact.s4">Özel Proje</option>
+                        <select name="service">
+                            <option data-key="contact.s1" value="Landing Page">Landing Page</option>
+                            <option data-key="contact.s2" value="Kurumsal Web Sitesi">Kurumsal Web Sitesi</option>
+                            <option data-key="contact.s3" value="E-Ticaret">E-Ticaret</option>
+                            <option data-key="contact.s4" value="Özel Proje">Özel Proje</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label data-key="contact.message">Mesajınız</label>
-                        <textarea rows="5" required></textarea>
+                        <textarea rows="5" name="message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;" data-key="contact.submit">Gönder</button>
                 </form>
