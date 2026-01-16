@@ -31,7 +31,26 @@ class AdminManager {
      */
     checkAuthentication() {
         const token = localStorage.getItem('adminToken');
-        return this.isAuthenticated || !!token;
+        if (!token) {
+            return false;
+        }
+        
+        // Token geçerlilik kontrolü (24 saat)
+        try {
+            const tokenTime = parseInt(token.split('_')[2]);
+            const now = Date.now();
+            const hoursPassed = (now - tokenTime) / (1000 * 60 * 60);
+            
+            if (hoursPassed >= 24) {
+                localStorage.removeItem('adminToken');
+                return false;
+            }
+            
+            return true;
+        } catch (e) {
+            localStorage.removeItem('adminToken');
+            return false;
+        }
     }
 
     /**

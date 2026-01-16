@@ -196,6 +196,25 @@
     </div>
 
     <script>
+        // Sayfa yüklendiğinde token kontrolü yap
+        window.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('adminToken');
+            if (token) {
+                // Token varsa ve geçerliyse panele yönlendir
+                const tokenTime = parseInt(token.split('_')[2]);
+                const now = Date.now();
+                const hoursPassed = (now - tokenTime) / (1000 * 60 * 60);
+                
+                if (hoursPassed < 24) {
+                    // Token 24 saatten yeniyse panele yönlendir
+                    window.location.href = 'index.html';
+                } else {
+                    // Token eskiyse temizle
+                    localStorage.removeItem('adminToken');
+                }
+            }
+        });
+
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -215,11 +234,6 @@
                 errorDiv.textContent = 'Geçersiz e-posta veya şifre. Lütfen test kullanıcısını kullanın.';
             }
         });
-
-        // Zaten giriş yapılmışsa doğrudan panele yönlendir
-        if (localStorage.getItem('adminToken')) {
-            window.location.href = 'index.html';
-        }
     </script>
 </body>
 </html>
