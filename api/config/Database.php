@@ -1,15 +1,48 @@
 <?php
 /**
  * Database Configuration
- * PDO ile SQLite veritabanı bağlantısı
+ * PDO ile MySQL veritabanı bağlantısı
+ * .env dosyasından bilgileri okur
  */
 
 class Database {
-    private $host = 'localhost:3306';
-    private $db_name = 'teknobeyaz_';
-    private $username = 'teknobeyaz';
-    private $password = 'teknobeyaz';
+    private $host;
+    private $db_name;
+    private $username;
+    private $password;
     private $conn;
+
+    public function __construct() {
+        // .env dosyasını yükle
+        $this->loadEnv();
+        
+        $this->host = getenv('DB_HOST') ?: 'localhost:3306';
+        $this->db_name = getenv('DB_NAME') ?: 'teknobeyaz_';
+        $this->username = getenv('DB_USER') ?: 'teknobeyaz';
+        $this->password = getenv('DB_PASS') ?: 'teknobeyaz';
+    }
+
+    /**
+     * .env dosyasını yükle
+     */
+    private function loadEnv() {
+        $envFile = __DIR__ . '/../../.env';
+        if (file_exists($envFile)) {
+            $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            foreach ($lines as $line) {
+                if (strpos(trim($line), '#') === 0) continue;
+                
+                list($name, $value) = explode('=', $line, 2);
+                $name = trim($name);
+                $value = trim($value);
+                
+                if (!array_key_exists($name, $_ENV)) {
+                    putenv("$name=$value");
+                    $_ENV[$name] = $value;
+                }
+            }
+        }
+    }
 
     public function connect() {
         // MySQL için bağlantı
